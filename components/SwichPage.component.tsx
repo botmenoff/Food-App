@@ -7,8 +7,8 @@ type SwichPageProps = {
     onPageClick: (newPage: number) => void
 }
 export default function SwichPage({page, onPageClick}: SwichPageProps) {
-    const rightArrow = ">"
-    const leftArrow = "<"
+    const rightArrow = "→"
+    const leftArrow = "←"
   return (
     <View style={styles.container}>
         <Text style={styles.arrows} onPress={() => onPageClick(page - 1)}>{leftArrow}</Text>
@@ -24,11 +24,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
+    height: "100%",
     paddingHorizontal: "5%",
-    backgroundColor: "#6B7280"
+    backgroundColor: "#1a1613ff"
   },
   arrows: {
     cursor: "pointer",
     fontSize: 40,
+    color: "#EA4757"
   }
 });
